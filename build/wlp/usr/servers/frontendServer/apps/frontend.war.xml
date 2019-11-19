@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive>
+    <dir sourceOnDisk="/Users/morgan/Desktop/380server/frontend/src/main/webapp" targetInArchive="/"/>
+    <file sourceOnDisk="/Users/morgan/Desktop/380server/frontend/build/tmp/META-INF/MANIFEST.MF" targetInArchive="/META-INF/MANIFEST.MF"/>
+</archive>

@@ -1,0 +1,15 @@
+<div class ="menucontainer" style = "align-items: center; flex-wrap: wrap; align-content: flex-start;">
+  <div class = "searchmenu">
+    <mat-form-field style = "width:100%;">
+      <input matInput type="text" placeholder="Server Search" [(ngModel)]="value">
+      <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+  <mat-form-field>
+    <input matInput placeholder="Game Code:" value="1337">
+  </mat-form-field>
+  <button mat-raised-button class = "button1">Join</button>
+  <button mat-raised-button class = "button1" routerLink="/gameselector" routerLinkActive="active">Back</button>
+</div>
