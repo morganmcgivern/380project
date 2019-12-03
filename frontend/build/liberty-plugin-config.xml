@@ -1,38 +1,37 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <liberty-plugin-config version="2.0">
-  <installDirectory>/Users/morgan/Desktop/380server/build/wlp</installDirectory>
+  <installDirectory>/Users/awisniew/Projects/Oswego-2019/380project/frontend/build/wlp</installDirectory>
   <assemblyArtifact>
     <groupId>io.openliberty</groupId>
     <artifactId>openliberty-runtime</artifactId>
     <version>19.0.0.9</version>
     <type>zip</type>
   </assemblyArtifact>
-  <assemblyArchive>/Users/morgan/.gradle/caches/modules-2/files-2.1/io.openliberty/openliberty-runtime/19.0.0.9/f05e1f6f738d33a8fd93e356de12413fc0e271a5/openliberty-runtime-19.0.0.9.zip</assemblyArchive>
+  <assemblyArchive>/Users/awisniew/.gradle/caches/modules-2/files-2.1/io.openliberty/openliberty-runtime/19.0.0.9/f05e1f6f738d33a8fd93e356de12413fc0e271a5/openliberty-runtime-19.0.0.9.zip</assemblyArchive>
   <servers>
     <server>
-      <userDirectory>/Users/morgan/Desktop/380server/build/wlp/usr</userDirectory>
-      <serverDirectory>/Users/morgan/Desktop/380server/build/wlp/usr/servers/frontendServer</serverDirectory>
-      <serverOutputDirectory>/Users/morgan/Desktop/380server/build/wlp/usr/servers/frontendServer</serverOutputDirectory>
+      <userDirectory>/Users/awisniew/Projects/Oswego-2019/380project/frontend/build/wlp/usr</userDirectory>
+      <serverDirectory>/Users/awisniew/Projects/Oswego-2019/380project/frontend/build/wlp/usr/servers/frontendServer</serverDirectory>
+      <serverOutputDirectory>/Users/awisniew/Projects/Oswego-2019/380project/frontend/build/wlp/usr/servers/frontendServer</serverOutputDirectory>
       <serverName>frontendServer</serverName>
-      <configDirectory>/Users/morgan/Desktop/380server/frontend/src/main/liberty/config</configDirectory>
-      <configFile>/Users/morgan/Desktop/380server/frontend/src/main/liberty/config/server.xml</configFile>
+      <configFile>/Users/awisniew/Projects/Oswego-2019/380project/frontend/liberty/config/server.xml</configFile>
       <bootstrapProperties>
-        <httpPort>12000</httpPort>
-        <httpsPort>12005</httpsPort>
+        <httpPort>5063</httpPort>
+        <httpsPort>5064</httpsPort>
         <application.name>frontend.war</application.name>
       </bootstrapProperties>
-      <looseApplication>true</looseApplication>
+      <looseApplication>false</looseApplication>
       <stripVersion>false</stripVersion>
       <applications>
         <application>
           <appsDirectory>apps</appsDirectory>
-          <applicationFilename>frontend.war.xml</applicationFilename>
+          <applicationFilename>frontend.war</applicationFilename>
           <warSourceDirectory>src/main/webapp</warSourceDirectory>
           <projectType>war</projectType>
         </application>
       </applications>
       <aggregatorParentId>380server</aggregatorParentId>
-      <aggregatorParentBasedir>/Users/morgan/Desktop/380server</aggregatorParentBasedir>
+      <aggregatorParentBaseDir>/Users/awisniew/Projects/Oswego-2019/380project</aggregatorParentBaseDir>
     </server>
   </servers>
 </liberty-plugin-config>
