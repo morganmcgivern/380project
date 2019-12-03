@@ -1,93 +1,94 @@
-plugins {
-	id 'com.moowork.node' version '1.3.1'
+import org.ysb33r.gradle.nodejs.tasks.NpmTask
+
+apply plugin: 'org.ysb33r.nodejs.npm'
+
+description = 'Microservice :: Frontend UI'
+
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "gradle.plugin.org.ysb33r.gradle:nodejs-gradle-plugin:0.1"
+        classpath "net.wasdev.wlp.gradle.plugins:liberty-gradle-plugin:2.1"
+    }
 }
 
 ext {
-	httpPort = 12000
-	httpsPort = 12005
-	applicationName = "${war.archiveName}"
-	appUrl = "http://${hostname}:${httpPort}/"
+    warfileName = 'frontend'
+    wlpServerName = 'frontendServer'
 }
 
 war {
-	archiveName = "${baseName}.${extension}"
-	dependsOn 'copyFrontend'
+    archiveName = "${warfileName}.war"
+    dependsOn 'cpySrc'
 }
 
-node {
-	version = '10.16.3'
-	npmVersion = '6.9.0'
-	download = true
-	workDir = file("${rootDir}/frontend/prebuild/node")
-	nodeModulesDir = file("${rootDir}/frontend/prebuild")
+nodejs {
+     executable version : '10.9.0'
 }
 
-task cleanClient(type: Delete) {
-    group 'build client'
-    delete fileTree(dir: "${rootDir}/frontend/src/main/webapp/", exclude: [ '**/WEB-INF/**'])
+npm {
+    homeDirectory "$projectDir/npm_build"
 }
 
-task cleanNpm(type: Delete) {
-    group 'build client'
-    dependsOn 'clean'
-    delete "${rootDir}/frontend/prebuild/node", "${rootDir}/frontend/prebuild/node_modules"
+task npmInstall (type: NpmTask) {
+    description = 'Run npm install from Gradle.'
+    command 'install'
+    outputs.dir("$projectDir/npm_build/node_modules")
 }
 
-task npmUpdate {
-    group 'build client'
-    dependsOn 'npm_update'
+task cpySrc (type: Copy) {
+    from fileTree("${projectDir}/npm_build/dist")
+	into "${projectDir}/src/main/webapp"
+	dependsOn 'npmLint'
 }
 
-task buildStandaloneClient(type: NpmTask, dependsOn: npmInstall) {
-    group 'build client'
-    description = 'Compile client side folder for development'
-    inputs.files(fileTree("${rootDir}/frontend/prebuild/").matching {
+task npmBuild(type: NpmTask) {
+    description = 'Run npm run build from Gradle.'
+    command 'run'
+    cmdArgs 'build'
+    dependsOn 'npmInstall'
+    inputs.files(fileTree("${projectDir}/npm_build/src").matching {
         exclude "**/dist"
     }).withPropertyName("sourceFiles")
-    outputs.dir("${rootDir}/frontend/prebuild/dist").withPropertyName("outputDir")
-
-    if("prod".equals(System.getProperty("env_mode"))) {
-        println "### prod environment ###"
-        file("${rootDir}/frontend/prebuild/src/environments/environment.prod.ts").eachLine { String line ->
-            println line
-        }
-        println "########################"
-        args = ['run', 'prod']
-    } else {
-        args = ['run', 'build']
-    }
+    outputs.dir("$projectDir/npm_build/dist").withPropertyName("outputDir")
 }
 
-task copyFrontend(type: Copy) {
-	group 'build client'
-	dependsOn 'cleanClient', 'buildStandaloneClient'
-
-	from fileTree("${rootDir}/frontend/prebuild/dist")
-	into "${rootDir}/frontend/src/main/webapp"
-}
-
-npm_start {
-	dependsOn 'libertyStop'
-}
-
-libertyStart.doLast {
-    NetworkInterface.getNetworkInterfaces()
-    .findAll { it.isUp() && !it.isLoopback() && !it.isVirtual() }
-    .each {
-        it.getInetAddresses()
-        .findAll { !it.isLoopbackAddress() && it instanceof Inet4Address }
-        .each {
-            // ${it} is in the format /<IP>, so only use http:/ instead of http://
-            println "Application externally available at: http:/${it}:${httpPort}"
-        }
-    }
+task npmLint (type: NpmTask) {
+    description = 'Run npm run lint from Gradle.'
+    command 'run'
+    cmdArgs 'lint'
+    dependsOn 'npmBuild'
+    // run onlyIf npmBuild is not UP-TO-DATE
+    outputs.dir("$projectDir/npm_build/dist")
 }
 
 liberty {
-	server {
-		name = 'frontendServer'
-		apps = [war]
-		bootstrapProperties = ['httpPort': httpPort, 'httpsPort': httpsPort, 'application.name': applicationName]
-		configDirectory = file('src/main/liberty/config')
-	}
+    server {
+        name = wlpServerName
+        apps = [war]
+        configFile = new File("$projectDir/liberty/config/server.xml")
+        bootstrapProperties =
+            ['httpPort':frontendHttpPort, 'httpsPort':frontendHttpsPort, 'application.name':war.archiveName]
+        looseApplication = false
+    }
 }
+
+task url {
+    doLast { println frontendURL + '/login'}
+}
+
+gradle.taskGraph.whenReady { graph ->
+    if (graph.hasTask(":frontend:libertyStart")) {
+        libertyStart.doLast {
+            println ("Application should be running on ${frontendURL}")
+        }
+    }
+}
+
+clean.dependsOn 'libertyStop'
