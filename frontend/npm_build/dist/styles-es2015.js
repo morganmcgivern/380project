@@ -376,8 +376,8 @@ if (content.locals) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/awisniew/Projects/Oswego-2019/380project/frontend/npm_build/node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css */"./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css");
-module.exports = __webpack_require__(/*! /Users/awisniew/Projects/Oswego-2019/380project/frontend/npm_build/src/styles.css */"./src/styles.css");
+__webpack_require__(/*! /Users/morgan/Desktop/CS380V1/380project/frontend/npm_build/node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css */"./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css");
+module.exports = __webpack_require__(/*! /Users/morgan/Desktop/CS380V1/380project/frontend/npm_build/src/styles.css */"./src/styles.css");
 
 
 /***/ })

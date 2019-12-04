@@ -29,7 +29,7 @@ war {
 }
 
 nodejs {
-     executable version : '10.9.0'
+     executable version : '10.10.0'
 }
 
 npm {
