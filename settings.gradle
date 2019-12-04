@@ -1,2 +1,2 @@
-rootProject.name = '380server'
+rootProject.name = '380project'
 include 'frontend'

@@ -1,0 +1,39 @@
+<div #game id = "gamecontainer">
+    <div id = "gamedisplay">
+        updateSentence()
+<!--        <mat-card class = "blanks"></mat-card>&nbsp;-->
+    </div>
+    <div id = "hudcontainer">
+        <div id = "chatcontainer">
+            <form>
+                <mat-form-field class = "chatinput">
+                    <input matInput placeholder="Chat" value="">
+                </mat-form-field>
+            </form>
+            <mat-list dense>
+                <mat-list-item>
+                    chat
+                </mat-list-item>
+                <mat-list-item>
+                    test
+                </mat-list-item>
+            </mat-list>
+        </div>
+
+        <div id = "cardcontainer">
+            <button mat-raised-button class = "cards"></button>
+        </div>
+
+        <div id = "playerlistcontainer">
+            <button mat-flat-button id = "leavebutton">Leave</button>
+            <mat-list dense>
+                <mat-list-item class = "playercard">
+                    player1
+                </mat-list-item>
+                <mat-list-item class = "playercard">
+                    player2
+                </mat-list-item>
+            </mat-list>
+        </div>
+    </div>
+</div>

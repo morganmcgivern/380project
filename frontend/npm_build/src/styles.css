@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 * {
   font-family: 'Bowlby One SC', cursive;
-  font-size: 24px;
 }
 
 .bar{
@@ -49,6 +48,7 @@ body {
   height: 300px;
   display: inline-block;
   background-color: #edeae1;
+  font-size: 24px;
 }
 /* morgan mcgivern was here 2019 */
 

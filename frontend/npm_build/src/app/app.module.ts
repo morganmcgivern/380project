@@ -17,6 +17,11 @@ import {MatIconModule} from '@angular/material/icon';
 import {FormsModule} from '@angular/forms';
 import { MakegameComponent } from './makegame/makegame.component';
 import { SetmakerComponent } from './setmaker/setmaker.component';
+import { GamescreenComponent } from './gamescreen/gamescreen.component';
+import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
+
+
 
 
 
@@ -27,6 +32,7 @@ const appRoutes: Routes = [
   { path: 'serverbrowser', component: ServerbrowserComponent},
   { path: 'gameselector', component: GameselectorComponent },
   { path: 'makegame', component: MakegameComponent },
+  { path: 'gamescreen', component: GamescreenComponent },
   { path: 'setmaker', component: SetmakerComponent },
   { path: '', redirectTo: '/mainmenu', pathMatch: 'full'},
   { path: '**', component: PagenotfoundComponent }
@@ -43,13 +49,16 @@ const appRoutes: Routes = [
     HowtoplayComponent,
     ServerbrowserComponent,
     MakegameComponent,
-    SetmakerComponent
+    SetmakerComponent,
+    GamescreenComponent
   ],
   imports: [
     BrowserModule,
     MatButtonModule,
     BrowserAnimationsModule,
     MatInputModule,
+    MatListModule,
+    MatCardModule,
     MatIconModule,
     RouterModule.forRoot(
       appRoutes,

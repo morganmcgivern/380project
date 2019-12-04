@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <liberty-plugin-config version="2.0">
-  <installDirectory>/Users/morgan/Desktop/CS380V1/380project/frontend/build/wlp</installDirectory>
+  <installDirectory>/Users/morgan/Desktop/CS380V1.1/380project/frontend/build/wlp</installDirectory>
   <assemblyArtifact>
     <groupId>io.openliberty</groupId>
     <artifactId>openliberty-runtime</artifactId>
@@ -10,11 +10,11 @@
   <assemblyArchive>/Users/morgan/.gradle/caches/modules-2/files-2.1/io.openliberty/openliberty-runtime/19.0.0.9/f05e1f6f738d33a8fd93e356de12413fc0e271a5/openliberty-runtime-19.0.0.9.zip</assemblyArchive>
   <servers>
     <server>
-      <userDirectory>/Users/morgan/Desktop/CS380V1/380project/frontend/build/wlp/usr</userDirectory>
-      <serverDirectory>/Users/morgan/Desktop/CS380V1/380project/frontend/build/wlp/usr/servers/frontendServer</serverDirectory>
-      <serverOutputDirectory>/Users/morgan/Desktop/CS380V1/380project/frontend/build/wlp/usr/servers/frontendServer</serverOutputDirectory>
+      <userDirectory>/Users/morgan/Desktop/CS380V1.1/380project/frontend/build/wlp/usr</userDirectory>
+      <serverDirectory>/Users/morgan/Desktop/CS380V1.1/380project/frontend/build/wlp/usr/servers/frontendServer</serverDirectory>
+      <serverOutputDirectory>/Users/morgan/Desktop/CS380V1.1/380project/frontend/build/wlp/usr/servers/frontendServer</serverOutputDirectory>
       <serverName>frontendServer</serverName>
-      <configFile>/Users/morgan/Desktop/CS380V1/380project/frontend/liberty/config/server.xml</configFile>
+      <configFile>/Users/morgan/Desktop/CS380V1.1/380project/frontend/liberty/config/server.xml</configFile>
       <bootstrapProperties>
         <httpPort>5063</httpPort>
         <httpsPort>5064</httpsPort>
@@ -30,8 +30,8 @@
           <projectType>war</projectType>
         </application>
       </applications>
-      <aggregatorParentId>380server</aggregatorParentId>
-      <aggregatorParentBaseDir>/Users/morgan/Desktop/CS380V1/380project</aggregatorParentBaseDir>
+      <aggregatorParentId>380project</aggregatorParentId>
+      <aggregatorParentBaseDir>/Users/morgan/Desktop/CS380V1.1/380project</aggregatorParentBaseDir>
     </server>
   </servers>
 </liberty-plugin-config>
