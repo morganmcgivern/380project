@@ -20,6 +20,8 @@ import { SetmakerComponent } from './setmaker/setmaker.component';
 import { GamescreenComponent } from './gamescreen/gamescreen.component';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import { MakesingleplayergameComponent } from './makesingleplayergame/makesingleplayergame.component';
+import { PassnplayscreenComponent } from './passnplayscreen/passnplayscreen.component';
 
 
 
@@ -34,6 +36,8 @@ const appRoutes: Routes = [
   { path: 'makegame', component: MakegameComponent },
   { path: 'gamescreen', component: GamescreenComponent },
   { path: 'setmaker', component: SetmakerComponent },
+  { path: 'makesingleplayergame', component: MakesingleplayergameComponent },
+  { path: 'passnplay', component: PassnplayscreenComponent },
   { path: '', redirectTo: '/mainmenu', pathMatch: 'full'},
   { path: '**', component: PagenotfoundComponent }
 ];
@@ -50,7 +54,9 @@ const appRoutes: Routes = [
     ServerbrowserComponent,
     MakegameComponent,
     SetmakerComponent,
-    GamescreenComponent
+    GamescreenComponent,
+    MakesingleplayergameComponent,
+    PassnplayscreenComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,22 @@
+#playeraddcontainer{
+    display:flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 490px;
+    height: 490px;
+    background-color: wheat;
+    align-content: flex-start;
+}
+
+.playercard{
+    width: 80%;
+    height: 100px;
+}
+
+.setcard{
+
+}
+
+.addbutton{
+
+}

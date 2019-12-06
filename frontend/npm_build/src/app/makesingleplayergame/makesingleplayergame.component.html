@@ -1,0 +1,23 @@
+<div class="menucontainer"  style = "align-items: center; flex-wrap: wrap;">
+    <mat-form-field>
+        <input matInput placeholder="Score Cap:" value="5">
+    </mat-form-field>
+    <div id = "playeraddcontainer">
+        <mat-form-field style = "width:80%;">
+            <input matInput type="text" placeholder="Player Name" [(ngModel)]="value">
+            <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
+    </div>
+    <div class = "searchmenu">
+        <mat-form-field style = "width:100%;">
+            <input matInput type="text" placeholder="Set Search" [(ngModel)]="value">
+            <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
+    </div>
+    <button mat-raised-button class = "button1" routerLink="/passnplay" routerLinkActive="active">Create</button>
+    <button mat-raised-button class = "button1" routerLink="/mainmenu" routerLinkActive="active">Back</button>
+</div>
