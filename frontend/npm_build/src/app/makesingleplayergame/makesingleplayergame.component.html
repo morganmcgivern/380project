@@ -1,14 +1,16 @@
-<div class="menucontainer"  style = "align-items: center; flex-wrap: wrap;">
+<div class="menucontainer"  style = "align-content: space-between; align-items: center; flex-wrap: wrap; justify-content: space-evenly;">
     <mat-form-field>
-        <input matInput placeholder="Score Cap:" value="5">
+        <input matInput placeholder="Score Cap:" [(ngModel)]="gameService.scorecap">
     </mat-form-field>
     <div id = "playeraddcontainer">
-        <mat-form-field style = "width:80%;">
-            <input matInput type="text" placeholder="Player Name" [(ngModel)]="value">
-            <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-form-field style = "width:100%;">
+            <input matInput type="text" placeholder="Player Name" [(ngModel)]="playername">
+            <button mat-button *ngIf="playername" matSuffix mat-icon-button aria-label="Clear" (click)="playername=''">
                 <mat-icon>close</mat-icon>
             </button>
         </mat-form-field>
+        <button (click)="addPlayer(playername)" mat-flat-button style = "width:20%;">Add</button>
+        <ul><mat-card class = "playercard" *ngFor="let player of gameService.playerlist"><mat-card-title>{{player}}</mat-card-title></mat-card></ul>
     </div>
     <div class = "searchmenu">
         <mat-form-field style = "width:100%;">

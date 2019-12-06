@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GameserviceService } from '../gameservice.service';
 
 @Component({
   selector: 'app-makesingleplayergame',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./makesingleplayergame.component.css']
 })
 export class MakesingleplayergameComponent implements OnInit {
+  playername = '';
 
-  constructor() { }
+  constructor(
+      private gameService: GameserviceService,
+  ) {
+
+  }
 
   ngOnInit() {
   }
 
+  addPlayer(playername) {
+    window.alert('ding');
+    this.gameService.addPlayer(playername);
+  }
 }

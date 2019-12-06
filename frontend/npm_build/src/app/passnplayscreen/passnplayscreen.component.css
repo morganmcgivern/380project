@@ -1,0 +1,67 @@
+#gamecontainer{
+    padding: 0px;
+    margin: 0;
+    background-color: blanchedalmond;
+    width: 100%;
+    height: 100%;
+}
+
+#gamedisplay{
+    background-color:purple;
+    height:60%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+#hudcontainer{
+    background-color:maroon;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    height:40%;
+}
+
+#cardcontainer{
+    background-color: cadetblue;
+    width:60%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+}
+
+#playerlistcontainer{
+    background-color:darkorange;
+    width:20%;
+    height:100%;
+}
+
+.playercard{
+    background-color: steelblue;
+}
+
+
+.cards{
+    margin-top:20px;
+    width:150px;
+    height:200px;
+}
+
+.blanks{
+    width:100px;
+    height:40px;
+}
+
+#leavebutton{
+    margin:5%;
+    width:90%;
+}
+
+#confirmbutton{
+    width:20%;
+    height:100%;
+}

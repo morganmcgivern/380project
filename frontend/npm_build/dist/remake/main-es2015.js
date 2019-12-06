@@ -84,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"menucontainer\">\n  <button mat-raised-button class = \"button1\" routerLink=\"/gameselector\" routerLinkActive=\"active\">Play</button>\n  <button mat-raised-button class = \"button1\" routerLink=\"/setmaker\" routerLinkActive=\"active\">Make Set</button>\n  <button mat-raised-button class = \"button1\" routerLink=\"/howtoplay\" routerLinkActive=\"active\">How to Play</button>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"menucontainer\">\n  <button mat-raised-button class = \"button1\" routerLink=\"/makesingleplayergame\" routerLinkActive=\"active\">Play</button>\n  <button mat-raised-button class = \"button1\" routerLink=\"/setmaker\" routerLinkActive=\"active\">Make Set</button>\n  <button mat-raised-button class = \"button1\" routerLink=\"/howtoplay\" routerLinkActive=\"active\">How to Play</button>\n</div>\n");
 
 /***/ }),
 
@@ -98,6 +98,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"menucontainer\"  style = \"align-items: center; flex-wrap: wrap;\">\n  <mat-form-field>\n    <input matInput placeholder=\"Game Name:\" value=\"spaghetti\">\n  </mat-form-field>\n  <mat-form-field>\n    <input matInput placeholder=\"Player Cap:\" value=\"9000\">\n  </mat-form-field>\n  <mat-form-field>\n    <input matInput placeholder=\"Score Cap:\" value=\"5\">\n  </mat-form-field>\n  <mat-form-field>\n    <input matInput placeholder=\"Game Code:\" value=\"1337\">\n  </mat-form-field>\n  <div class = \"searchmenu\">\n    <mat-form-field style = \"width:100%;\">\n      <input matInput type=\"text\" placeholder=\"Set Search\" [(ngModel)]=\"value\">\n      <button mat-button *ngIf=\"value\" matSuffix mat-icon-button aria-label=\"Clear\" (click)=\"value=''\">\n        <mat-icon>close</mat-icon>\n      </button>\n    </mat-form-field>\n  </div>\n  <button mat-raised-button class = \"button1\" routerLink=\"/gamescreen\" routerLinkActive=\"active\">Create</button>\n  <button mat-raised-button class = \"button1\" routerLink=\"/gameselector\" routerLinkActive=\"active\">Back</button>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/makesingleplayergame/makesingleplayergame.component.html":
+/*!****************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/makesingleplayergame/makesingleplayergame.component.html ***!
+  \****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"menucontainer\"  style = \"align-items: center; flex-wrap: wrap;\">\n    <mat-form-field>\n        <input matInput placeholder=\"Score Cap:\" value=\"5\">\n    </mat-form-field>\n    <div id = \"playeraddcontainer\">\n        <mat-form-field style = \"width:80%;\">\n            <input matInput type=\"text\" placeholder=\"Player Name\" [(ngModel)]=\"value\">\n            <button mat-button *ngIf=\"value\" matSuffix mat-icon-button aria-label=\"Clear\" (click)=\"value=''\">\n                <mat-icon>close</mat-icon>\n            </button>\n        </mat-form-field>\n    </div>\n    <div class = \"searchmenu\">\n        <mat-form-field style = \"width:100%;\">\n            <input matInput type=\"text\" placeholder=\"Set Search\" [(ngModel)]=\"value\">\n            <button mat-button *ngIf=\"value\" matSuffix mat-icon-button aria-label=\"Clear\" (click)=\"value=''\">\n                <mat-icon>close</mat-icon>\n            </button>\n        </mat-form-field>\n    </div>\n    <button mat-raised-button class = \"button1\" routerLink=\"/passnplay\" routerLinkActive=\"active\">Create</button>\n    <button mat-raised-button class = \"button1\" routerLink=\"/mainmenu\" routerLinkActive=\"active\">Back</button>\n</div>\n");
 
 /***/ }),
 
@@ -124,6 +137,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<body style = \"text-align: center;\">\n<img alt=\"doom\" src=\"../../assets/images/ohno.png\" style=\"display:block; margin:auto; padding-top: 20px;\" routerLink=\"/mainmenu\" routerLinkActive=\"active\">\nyou have lost your way friend, touch my noodly appendage to be transported back to your dimension\n</body>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/passnplayscreen/passnplayscreen.component.html":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/passnplayscreen/passnplayscreen.component.html ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>passnplayscreen works!</p>\n");
 
 /***/ }),
 
@@ -471,6 +497,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _gamescreen_gamescreen_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./gamescreen/gamescreen.component */ "./src/app/gamescreen/gamescreen.component.ts");
 /* harmony import */ var _angular_material_list__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/material/list */ "./node_modules/@angular/material/esm2015/list.js");
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material/card */ "./node_modules/@angular/material/esm2015/card.js");
+/* harmony import */ var _makesingleplayergame_makesingleplayergame_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./makesingleplayergame/makesingleplayergame.component */ "./src/app/makesingleplayergame/makesingleplayergame.component.ts");
+/* harmony import */ var _passnplayscreen_passnplayscreen_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./passnplayscreen/passnplayscreen.component */ "./src/app/passnplayscreen/passnplayscreen.component.ts");
+
+
 
 
 
@@ -501,6 +531,8 @@ const appRoutes = [
     { path: 'makegame', component: _makegame_makegame_component__WEBPACK_IMPORTED_MODULE_17__["MakegameComponent"] },
     { path: 'gamescreen', component: _gamescreen_gamescreen_component__WEBPACK_IMPORTED_MODULE_19__["GamescreenComponent"] },
     { path: 'setmaker', component: _setmaker_setmaker_component__WEBPACK_IMPORTED_MODULE_18__["SetmakerComponent"] },
+    { path: 'makesingleplayergame', component: _makesingleplayergame_makesingleplayergame_component__WEBPACK_IMPORTED_MODULE_22__["MakesingleplayergameComponent"] },
+    { path: 'passnplay', component: _passnplayscreen_passnplayscreen_component__WEBPACK_IMPORTED_MODULE_23__["PassnplayscreenComponent"] },
     { path: '', redirectTo: '/mainmenu', pathMatch: 'full' },
     { path: '**', component: _pagenotfound_pagenotfound_component__WEBPACK_IMPORTED_MODULE_10__["PagenotfoundComponent"] }
 ];
@@ -519,7 +551,9 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _serverbrowser_serverbrowser_component__WEBPACK_IMPORTED_MODULE_13__["ServerbrowserComponent"],
             _makegame_makegame_component__WEBPACK_IMPORTED_MODULE_17__["MakegameComponent"],
             _setmaker_setmaker_component__WEBPACK_IMPORTED_MODULE_18__["SetmakerComponent"],
-            _gamescreen_gamescreen_component__WEBPACK_IMPORTED_MODULE_19__["GamescreenComponent"]
+            _gamescreen_gamescreen_component__WEBPACK_IMPORTED_MODULE_19__["GamescreenComponent"],
+            _makesingleplayergame_makesingleplayergame_component__WEBPACK_IMPORTED_MODULE_22__["MakesingleplayergameComponent"],
+            _passnplayscreen_passnplayscreen_component__WEBPACK_IMPORTED_MODULE_23__["PassnplayscreenComponent"],
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -779,6 +813,50 @@ MakegameComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/makesingleplayergame/makesingleplayergame.component.css":
+/*!*************************************************************************!*\
+  !*** ./src/app/makesingleplayergame/makesingleplayergame.component.css ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("#playeraddcontainer{\n    display:flex;\n    flex-direction: column;\n    padding: 10px;\n    width: 490px;\n    height: 490px;\n    background-color: wheat;\n    align-content: flex-start;\n}\n\n.playercard{\n    width: 80%;\n    height: 100px;\n}\n\n.setcard{\n\n}\n\n.addbutton{\n\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFrZXNpbmdsZXBsYXllcmdhbWUvbWFrZXNpbmdsZXBsYXllcmdhbWUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFlBQVk7SUFDWixzQkFBc0I7SUFDdEIsYUFBYTtJQUNiLFlBQVk7SUFDWixhQUFhO0lBQ2IsdUJBQXVCO0lBQ3ZCLHlCQUF5QjtBQUM3Qjs7QUFFQTtJQUNJLFVBQVU7SUFDVixhQUFhO0FBQ2pCOztBQUVBOztBQUVBOztBQUVBOztBQUVBIiwiZmlsZSI6InNyYy9hcHAvbWFrZXNpbmdsZXBsYXllcmdhbWUvbWFrZXNpbmdsZXBsYXllcmdhbWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIiNwbGF5ZXJhZGRjb250YWluZXJ7XG4gICAgZGlzcGxheTpmbGV4O1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgcGFkZGluZzogMTBweDtcbiAgICB3aWR0aDogNDkwcHg7XG4gICAgaGVpZ2h0OiA0OTBweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGVhdDtcbiAgICBhbGlnbi1jb250ZW50OiBmbGV4LXN0YXJ0O1xufVxuXG4ucGxheWVyY2FyZHtcbiAgICB3aWR0aDogODAlO1xuICAgIGhlaWdodDogMTAwcHg7XG59XG5cbi5zZXRjYXJke1xuXG59XG5cbi5hZGRidXR0b257XG5cbn1cbiJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/makesingleplayergame/makesingleplayergame.component.ts":
+/*!************************************************************************!*\
+  !*** ./src/app/makesingleplayergame/makesingleplayergame.component.ts ***!
+  \************************************************************************/
+/*! exports provided: MakesingleplayergameComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MakesingleplayergameComponent", function() { return MakesingleplayergameComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let MakesingleplayergameComponent = class MakesingleplayergameComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+MakesingleplayergameComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-makesingleplayergame',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./makesingleplayergame.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/makesingleplayergame/makesingleplayergame.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./makesingleplayergame.component.css */ "./src/app/makesingleplayergame/makesingleplayergame.component.css")).default]
+    })
+], MakesingleplayergameComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/page/page.component.css":
 /*!*****************************************!*\
   !*** ./src/app/page/page.component.css ***!
@@ -862,6 +940,50 @@ PagenotfoundComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./pagenotfound.component.css */ "./src/app/pagenotfound/pagenotfound.component.css")).default]
     })
 ], PagenotfoundComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/passnplayscreen/passnplayscreen.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/passnplayscreen/passnplayscreen.component.css ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Bhc3NucGxheXNjcmVlbi9wYXNzbnBsYXlzY3JlZW4uY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/passnplayscreen/passnplayscreen.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/passnplayscreen/passnplayscreen.component.ts ***!
+  \**************************************************************/
+/*! exports provided: PassnplayscreenComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PassnplayscreenComponent", function() { return PassnplayscreenComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let PassnplayscreenComponent = class PassnplayscreenComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+PassnplayscreenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-passnplayscreen',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./passnplayscreen.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/passnplayscreen/passnplayscreen.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./passnplayscreen.component.css */ "./src/app/passnplayscreen/passnplayscreen.component.css")).default]
+    })
+], PassnplayscreenComponent);
 
 
 

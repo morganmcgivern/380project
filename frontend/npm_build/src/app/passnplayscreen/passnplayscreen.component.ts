@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GameserviceService } from '../gameservice.service';
+
 
 @Component({
   selector: 'app-passnplayscreen',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./passnplayscreen.component.css']
 })
 export class PassnplayscreenComponent implements OnInit {
+  constructor(
+      private gameService: GameserviceService,
 
-  constructor() { }
+  ) { }
 
   ngOnInit() {
+
   }
 
 }

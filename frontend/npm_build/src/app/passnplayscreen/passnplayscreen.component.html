@@ -1,1 +1,24 @@
-<p>passnplayscreen works!</p>
+<div #game id = "gamecontainer">
+    <div id = "gamedisplay">
+        here is the &nbsp; <mat-card class = blanks></mat-card>
+        <!--        <mat-card class = "blanks"></mat-card>&nbsp;-->
+    </div>
+    <div id = "hudcontainer">
+        <div id = "confirmbutton">
+            <button mat-raised-button style ="width: 100%; height: 100%;">Confirm</button>
+        </div>
+
+        <div id = "cardcontainer">
+            <button mat-raised-button class = "cards">game</button>
+        </div>
+
+        <div id = "playerlistcontainer">
+            <button mat-flat-button id = "leavebutton">End Game</button>
+            <mat-list dense>
+                <mat-list-item class = "playercard" *ngFor="let player of gameService.playerlist">
+                    {{player}}
+                </mat-list-item>
+            </mat-list>
+        </div>
+    </div>
+</div>
